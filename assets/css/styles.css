@@ -1,0 +1,514 @@
+/*Reset Css*/
+/* - cho padding va magin = 0 
+   - loại bỏ boder bằng thuộc tính box-sizing
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*hanh dong muon cho click*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+1. làm từ ngoài vào trong 
+2. làm từ trên xuống dưới 
+3. từ tổng quan đến chi tiết 
+*/
+
+/*
+1 vị trí 
+2 . kích thước (width và hieght)
+3 màu sắc 
+4 kiểu dáng (kiểu chữ ,hình tròn ,vuông ....)
+
+*/
+
+/*Common*/
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row{
+margin-left: -8px;
+margin-right: -8px;
+
+}
+.contect-width{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{   
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-full
+{
+    width: 100% !important;
+}
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;  /* đưa về inline-block để không bị ăn phần padding */
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    }
+    
+.btn:hover{
+        color: #000;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+
+/* main*/
+#main{
+
+}
+
+#header{
+    height: 46px;
+    background-color: rgb(24, 18, 18);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+   
+}
+
+#nav {
+    display: inline-block;
+    
+}
+#nav , .subnav{
+    list-style-type: none;
+
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+#nav li a {
+   
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav li:hover > a,
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+#nav .subnav a {
+    color:#000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0px 21px;
+    
+}
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header.mobile-menu-btn:hover .menu-icon {
+ color: rgb(17, 16, 16);
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor:pointer;
+}
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+#nav .nav_down{
+    font: size 12px;;
+}
+
+#slider{
+    position: relative;
+    background-color: bisque;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url('/assets/css/img/slider/slider1.jpg');
+    background-position: top center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+   /* background: url('/assets/css/img/slider/slider1.jpg') top center / cover no-repeat;*/
+}
+#slider .text-content{
+position: absolute;
+bottom: 47px;
+color:#fff;
+left:50%;
+transform:translateX(-50%);
+text-align: center;
+}
+#slider .text-heading{
+ font-weight: 500;
+ font-size: 24px;
+
+}
+#slider .text-description{
+font-size: 15px;
+margin-top: 25px;
+
+}
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    padding-right: 12px;
+}
+#content .section-heading{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+
+}
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    
+}
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#content .member-item{
+    float: left;
+    width:50%;
+}
+#content .member-name{
+    font-size: 16px;
+    text-align:center;
+    
+}
+#content .member-list{
+    margin-top: 48px;
+}
+#content .member-img{
+    margin-top: 16px;
+    width: 350px;
+    height: auto;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* tour-section*/
+.tour-section{
+    background-color: #000;
+}
+.tour-section .tickets-list > ul {
+    background-color: #fff;
+}
+.tickets-list .sold-out{
+    width: 30px;
+    background-color: #e78b8b;
+
+}
+.tickets-list .quanlity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+    
+}
+.tickets-list li { 
+    font-size: 16px;
+    padding: 4px 16px;
+    border-bottom: 1px solid #ccc;
+}
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+    box-sizing: border-box;
+   
+}
+
+/*places*/
+.place-list{
+margin-top: 16px;
+
+}
+
+.place-img{
+width: 100%;
+display: block;
+}
+
+.place-img:hover{
+    opacity: 0.7;
+}
+.place-body{
+ background-color: #fff;
+ font-size: 15px;
+ padding: 16px;
+}
+.place-heading{
+font-size: 15px;
+font-weight: 600;
+
+}
+.place-time{
+margin-top: 15px;
+color: #757575;
+}
+
+.place-desc{
+margin-top: 15px;
+line-height: 1.4;
+
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background-color: white;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+   /* min-height: 320px;*/
+    position: relative;
+    animation: modalFadeIn ease   0.5s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: grab;
+    opacity: 0.7;
+}
+
+
+.modal-close:hover {
+    opacity: 1;
+    /* color: red; */
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+    font-size: 28px;
+    color: #fff;
+}
+
+i.modal-heading-icon.ti-bag {
+    margin-right: 18px;
+   
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-lable {
+    display: block;
+    font-size: 15px;
+    margin: 12px;
+}
+
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets {
+    background-color: #009688;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 16px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover{
+    opacity: 0.7;
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right; 
+    /* text-align: right;  -- de can chu ra giua*/
+}
+
+/*contact - content*/
+.contact-content {
+    margin-top: 48px;
+ 
+ }
+ 
+ .contact-info {
+     font-size: 18px;
+ }
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+ 
+.contact-form .form-control {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+/*map-section */
+
+.map-section img{
+width: 100%;
+
+}
+
+#footer{
+text-align: center;
+padding: 64px 16px;
+}
+
+#footer .sociallist{
+    font-size: 24px ;
+}
+
+#footer .sociallist a{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+
+#footer .sociallist a:hover{
+    color: rgba(0, 0, 0, 0.2);
+} 
+
+@keyframes modalFadeIn {
+        from{
+            opacity: 0;
+        transform: translateX(-130px);
+        }
+        to {
+            opacity: 1;
+        transform: translateY(0);
+        }
+
+}
